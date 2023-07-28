@@ -1,0 +1,154 @@
+1. Explain the concept of method overloading in java provide example using static method.
+   Inside the class having one or more same method name but the parameters will be different.
+   Ex: class Overload{
+	static void Carpenter(float experience)
+	{
+	 System.out.println("Carpenter info");
+	}
+	static void carpenter(int experience,string name)
+	{
+	System.out.println("Carpenter information:");
+	}
+       }
+    class Main{
+     public static void main(String[] args)
+	{
+	 Overload.Carpenter(4.0f);
+	 Overload.Carpenter(5,"Aishu");
+	}
+	}
+
+2.What are different Kinds of variables defined in Java programming language? With examples
+  There are Four Different variables:
+  1)Local variable:The variable declared inside the method.
+  2)static variable:The variables which declared outside the method inside the class using the static keyword
+  3)Instance variable:The variables which declared outside the method inside the class.
+  4)Parameter:The variable declared Within the parenthesis.
+  Example:
+  class Variables{
+	static String name="Aishwarya";
+        float age=21;
+  public static void main(String[] args){
+      String qualification="BE";
+      System.out.println("Name is:"+name);
+      System.out.println("Age is:"+age);
+      System.out.println("Qualification is:"+qualification);
+    }
+  }
+
+ 4.write a program to Constructor overloading.
+   Constructor overloading is having having one or more constructor but parameters will be different.
+   class Constructor{
+    String name="aishwarya";
+    int experience=3;
+   Carpenter()
+    {
+	System.out.println("Carpenter info");
+    }
+   Carpenter(String name,int experience)
+    {
+      this.experience=experience;
+      this.name=name;
+      System.out.println("Carpenter info"+this.experience);
+      System.out.println("Name is:"+this.name);
+    }
+
+   class Main{
+     public static void main(String[] args)
+     {
+      Carpenter carpenter=new Carpenter();
+      System.out.println(carpenter.name);
+      System.out.println(carpenter.experience);
+     }
+   }
+6. write a program to static variable and static method
+   class Chair{
+    static int price;
+    static String color;
+    static{
+     price=300;
+     color="white";
+    }
+    static void printStatic()
+    {
+	System.out.println("Price is:"+price);
+        System.out.println("Color is:"+color);
+    }
+    class Main{
+     public static void main(String[] args)
+     {
+      Helmet.printStatic();
+     }
+7. write a program for constructor chaining using this keyword
+  class Constructor{
+  Carpenter(String name){
+   this.name=name;
+   System.out.println("name is:"+this.name);
+   }
+  Carpenter(String name,int experience)
+  {
+   this(name);
+   this.experience=experience;
+   System.out.println("experience is:"+this.experience);
+  }
+  Carpenter(String name,int experience,float salary)
+   {
+    this(name,experience);
+    this.salary=salary;
+    System.out.println("Salary is:"+this.salary);
+   }
+  }
+  class Main{
+     public static void main(String[] args)
+     {
+      Carpenter carpenter=new Carpenter();
+      System.out.println(carpenter.name);
+      System.out.println(carpenter.experience);
+      System.out.println(carpenter.salary);
+     }
+   }
+
+5. write a program for instance method overloading in java
+  class Instance{
+   void PrintInstance(int price)
+    {
+     System.out.println("Price is:"+this.price);
+    }
+   void PrintInstance(int price,String name)
+    {
+     this.price=price;
+     this.name=name;
+     System.out.println("Price is:"+this.price);  
+     System.out.println("Price is:"+this.name);  
+   }
+   class Main{
+     public static void main(String[] args)
+     {
+      PrintInstance printinstance=new PrintInstance();
+      printinstance.printInstance(500);
+      printinstance.printInstance(500,"Aishwarya");
+     }
+3. differnces between Heap and stack memory in java?
+   Heap memory is the primary memory.There will be metaspace,constant pool,instance memory. Metaspace can be used to load the class information,Constant pool is used to assign the values to the 
+   variables.Instance memory is used to assign the null values.
+   
+    
+     
+  
+
+
+      
+
+  
+      
+      
+
+    
+
+  
+
+
+         
+   
+
+	
